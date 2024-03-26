@@ -1,0 +1,6 @@
+@LMSTrack_HostAddress = http://localhost:5298
+
+GET {{LMSTrack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
