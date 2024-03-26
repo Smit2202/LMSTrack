@@ -7,8 +7,9 @@ namespace LMSTrack.Services.LMSServices
     {
         Task<List<Book>> GetBooks();
         Task<Book?> GetBook(int id);
-        Task<List<Book>> PostBook(Book book);
-        Task<List<Book>> PutBook(int id, Book book);
-        Task<List<Book>> DeleteBook(int id);
+        Task<Book> GetBookbyname(string titlename);
+        Task<List<Book?>> PostBook(Book book);
+        Task<List<Book?>> PutBook(int id, Book book);
+        Task<List<Book?>> DeleteBook(int id);
     }
 }

@@ -28,6 +28,12 @@ namespace LMSTrack.Services.LMSServices
 
             return hero;
         }
+
+        public async Task<Book?> GetBookbyname(string titlename)
+        {
+            var book = await _context.Books.FirstOrDefaultAsync(b => b.Title == titlename);
+            return book; 
+        }
         public async Task<List<Book>> PostBook(Book book)
         {
             _context.Books.Add(book);

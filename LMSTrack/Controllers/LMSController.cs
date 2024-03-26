@@ -26,11 +26,18 @@ namespace LMSTrack.Controllers
             return await _lMSServices.GetBooks();
         }
 
-        // GET: api/Books/5
-        [HttpGet("{bId}")]
-        public async Task<ActionResult<Book>> GetBook(int bId)
+        //// GET: api/Books/5
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Book>> GetBook(int id)
+        //{
+        //    return Ok(await _lMSServices.GetBook(id));
+        //}
+
+        // GET: api/Users/titlename
+        [HttpGet("{title}")]
+        public async Task<ActionResult<Book>> GetBookbyname(string title)
         {
-            return Ok(await _lMSServices.GetBook(bId));
+            return Ok(await _lMSServices.GetBookbyname(title));
         }
 
         // POST: api/Books
